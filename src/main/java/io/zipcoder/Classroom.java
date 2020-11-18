@@ -41,13 +41,14 @@ public class Classroom {
     }
 
     public double getAverageExamScore() {
-        double sum = 0;
-        int studentScore = 0;
-        for (Student d : students) {
-            sum += d.getAverageExamScore();
-            studentScore++;
+        double studentAverage = 0.0;
+        double classAverage = 0.0;
+        for(int i = 0; i < students.length; i++){
+            studentAverage +=students[i].getAverageExamScore();
+
         }
-        return sum / studentScore;
+        classAverage= studentAverage/ students.length;
+        return classAverage;
     }
 
 
